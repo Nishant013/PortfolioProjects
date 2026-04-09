@@ -16,21 +16,8 @@ FROM nishantdb.coviddeathsnew
 WHERE continent IS NOT NULL
 AND iso_code NOT LIKE 'OWID%';
 
--- Just a double check based off the data provided
--- numbers are extremely close so we will keep them - The Second includes "International"  Location
-
-
---Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
---From nishantdb.coviddeathsnew
-----Where location like '%states%'
---where location = 'World'
-----Group By date
---order by 1,2
-
-
 -- 2. 
 
--- We take these out as they are not inluded in the above queries and want to stay consistent
 -- European Union is part of Europe
 
 Select location, SUM(cast(new_deaths as int)) as TotalDeathCount
