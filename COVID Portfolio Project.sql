@@ -7,7 +7,7 @@ select * from nishantdb.coviddeathsnew
 where continent is not null
 order by 3,4;
 
--- Select Data that we are going to be starting with
+-- Selecting the Data that we are going to use
 
 select location, date, total_cases, new_cases, total_deaths, population 
 from nishantdb.coviddeathsnew
